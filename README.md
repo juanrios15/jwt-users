@@ -10,8 +10,6 @@
 ## How to run:
 ### Backend:
 - pip install -r requirements.txt
-- add secret.json to crm folder
-- Create db using postgres
 - python manage.py makemigrations
 - python manage.py migrate
 - python manage.py runserver
