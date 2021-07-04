@@ -14,6 +14,6 @@
 - python manage.py migrate
 - python manage.py runserver
 
-### Frontend (NodeJS must be installed):
+### Frontend:
 - npm install
 - npm start
