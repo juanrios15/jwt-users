@@ -18,6 +18,3 @@
 - npm install
 - npm start
 
-
-### Testing:
-- cover
