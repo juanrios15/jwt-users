@@ -13,17 +13,23 @@ import Footer from './Components/Footer';
 import SignUp from './Components/Register';
 import SignIn from './Components/Login';
 import Logout from './Components/Logout';
+import SinglePost from './Components/SinglePost';
+import Search from './Components/search';
 
 
 const routing = (
   <Router>
     <React.StrictMode>
-      <Header/>
+    {
+      localStorage.getItem('access_token') ? <Header logged={true}/>:<Header logged={false}/>
+     }
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/register" component={SignUp} />
         <Route exact path="/login" component={SignIn} />
         <Route path="/logout" component={Logout} />
+        <Route path="/post/:slug" component={SinglePost} />
+        <Route path="/search" component={Search} />
       </Switch>
       <Footer/>
     </React.StrictMode>

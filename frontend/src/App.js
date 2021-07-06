@@ -11,7 +11,6 @@ function App() {
     loading: false,
     posts: null,
   })
-  console.log(axiosInstance);
   useEffect(() => {
     axiosInstance.get().then((res) => {
 			const allPosts = res.data;
