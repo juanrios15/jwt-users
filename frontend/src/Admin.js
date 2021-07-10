@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Assets/css/App.css'
-import Posts from './Components/Posts/Posts'
+import Posts from './Components/Admin/Posts'
 import PostLoadingComp from './Components/PostLoading'
 import axiosInstance from './axios';
 
@@ -27,27 +27,3 @@ function App() {
 }
 
 export default App
-
-
-
-// Using fetch:
-// import React, { Component } from 'react'
-
-// export default class connectionExample extends Component {
-
-//   componentDidMount() {
-//     const apiUrl = 'http://127.0.0.1:8000/api/';
-//     fetch(apiUrl)
-//       .then((response) => response.json())
-//       .then((data) => console.log(data))
-//   }
-
-//   render() {
-//     return (
-//       <div>
-//         Example Connection
-//       </div>
-//     )
-//   }
-// }
-

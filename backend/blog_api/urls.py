@@ -1,21 +1,19 @@
 from django.urls import path
-from .views import PostDetail, PostDetailFilter, PostListView # PostList, PostDetailView, 
+from .views import PostDetail, PostDetailFilter, PostListView, PostViewset
 from rest_framework.routers import DefaultRouter
 
 app_name = 'blog_api'
 
-# router = DefaultRouter()
+router = DefaultRouter()
 
-# router.register('', PostList, basename="user")
+router.register('crudpost', PostViewset, basename="user")
 
 url_patterns = [
-    # path('<str:slug>/',PostDetailView.as_view(),name='detailcreate'),
+    # path('',PostListView.as_view(),name='listcreate'),
     path('posts/<str:pk>/',PostDetail.as_view(),name='detaillist'),
-    
-    #Search by slug
     path('search/',PostDetailFilter.as_view(),name='postsearch'),
-    path('',PostListView.as_view(),name='listcreate'),
+    #Search by slug
+    
 ]
 
-# urlpatterns = router.urls + url_patterns
-urlpatterns = url_patterns
+urlpatterns = router.urls + url_patterns

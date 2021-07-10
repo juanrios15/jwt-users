@@ -10,21 +10,27 @@ import {
 } from "react-router-dom";
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import SignUp from './Components/Register';
-import SignIn from './Components/Login';
-import Logout from './Components/Logout';
+import SignUp from './Components/Posts/Register';
+import SignIn from './Components/Posts/Login';
+import Logout from './Components/Posts/Logout';
 import SinglePost from './Components/SinglePost';
-import Search from './Components/search';
+import Search from './Components/Posts/search';
+import Admin from './Admin';
+import Create from './Components/Admin/Create';
+import Delete from './Components/Admin/Delete';
+import Update from './Components/Admin/Update';
 
 
 const routing = (
   <Router>
     <React.StrictMode>
-    {
-      localStorage.getItem('access_token') ? <Header logged={true}/>:<Header logged={false}/>
-     }
+      <Header/>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route exact path="/admin" component={Admin} />
+        <Route exact path="/admin/create" component={Create} />
+        <Route exact path="/admin/delete/:id" component={Delete} />
+        <Route exact path="/admin/update/:id" component={Update} />
         <Route exact path="/register" component={SignUp} />
         <Route exact path="/login" component={SignIn} />
         <Route path="/logout" component={Logout} />

@@ -17,21 +17,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-function Header(props) {
+function Header() {
     const classes = useStyles()
     let history = useHistory()
     const [data, setdata] = useState({search: ''})
-    console.log(props.logged)
-    let boton;
-      if (props.logged) {
-        boton = <Button href="#" color="primary" variant="outlined" className={classes.link} component={NavLink} to="/logout">
-            Logout
-        </Button>
-      } else {
-          boton = <Button href="#" color="primary" variant="outlined" className={classes.link} component={NavLink} to="/login">
-          Login
-      </Button>
-      }
 
     const goSearch = (e) => {
         history.push({
@@ -60,9 +49,12 @@ function Header(props) {
                             Register
                         </Link>
                     </nav>
-                    {boton}
-                    
-                    
+                    <Button href="#" color="primary" variant="outlined" className={classes.link} component={NavLink} to="/login">
+                        Login
+                    </Button>
+                    <Button href="#" color="primary" variant="outlined" className={classes.link} component={NavLink} to="/logout">
+                        Logout
+                    </Button>
                 </Toolbar>
             </AppBar>
         </React.Fragment>

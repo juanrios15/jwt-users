@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Posts = (props) => {
     const {posts} = props
+    console.log(posts)
     const classes = useStyles()
     if (!posts || posts.length === 0) return <p> Cannot find any posts, sorry </p>
     return (

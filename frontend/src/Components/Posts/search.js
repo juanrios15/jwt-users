@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import axiosInstance from '../axios'
+import axiosInstance from '../../axios'
 import { Card, CardContent, CardMedia, Container, Grid, Link, makeStyles, Typography } from '@material-ui/core'
 import { useLocation } from 'react-router-dom'
 
