@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/JS-JQuery-informational?style=flat&logo=javascript&logoColor=white&color=F0DB4F)
 ![](https://img.shields.io/badge/Django-3.1-informational?style=flat&logo=django&logoColor=white&color=092e20)
 ![](https://img.shields.io/badge/djangoREST-3.1-informational?style=flat&logo=django&logoColor=white&color=A30000)
-![](https://img.shields.io/badge/React-18-informational?style=flat&logo=react&logoColor=white&color=61DBFB)
+![](https://img.shields.io/badge/React-18.6-informational?style=flat&logo=react&logoColor=white&color=61DBFB)
 
 ## How to run:
 ### Backend:
